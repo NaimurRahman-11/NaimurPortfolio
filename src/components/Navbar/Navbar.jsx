@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 
 
-const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, handleHomeClick }) => {
+const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, handleHomeClick, handleProjectsClick }) => {
 
 
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
@@ -30,7 +30,7 @@ const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, han
 
     return (
         <div className="p-12">
-            <div className="navbar fixed top-0 left-0 right-0 z-10 bg-base-100 shadow-xl rounded-lg p-4">
+            <div className="navbar fixed top-0 left-0 right-0 z-10 bg-base-100 shadow-xl rounded-lg px-14">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -41,7 +41,7 @@ const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, han
                             <li><a onClick={handleAboutClick}>About</a></li>
                             <li><a onClick={handleEducationClick}>Education</a></li>
                             <li><a onClick={handleSkillsClick}>Skills</a></li>
-                            <li><a>Projects</a></li>
+                            <li><a onClick={handleProjectsClick}>Projects</a></li>
                             <li><a>Contact Me</a></li>
                         </ul>
                     </div>
@@ -53,7 +53,7 @@ const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, han
                         <li><a onClick={handleAboutClick}>About</a></li>
                         <li><a onClick={handleEducationClick}>Education</a></li>
                         <li><a onClick={handleSkillsClick}>Skills</a></li>
-                        <li><a>Projects</a></li>
+                        <li><a onClick={handleProjectsClick}>Projects</a></li>
 
                         <li><a>Contact Me</a></li>
                     </ul>
