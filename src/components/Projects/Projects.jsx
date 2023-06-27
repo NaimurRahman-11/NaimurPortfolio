@@ -41,7 +41,7 @@ const Projects = ({ projectsRef }) => {
   ];
 
   return (
-    <div ref={projectsRef} className="min-h-screen py-20 mt-5">
+    <div ref={projectsRef} className="min-h-screen py-20 mt-5 p-4">
       <h1 className="text-4xl font-bold text-center mb-10 mt-10">Projects</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -76,7 +76,7 @@ const Projects = ({ projectsRef }) => {
               <h2 className="modal-title">{selectedProject.title} Features:</h2>
               <ul className="features-list"> 
                 {selectedProject.features.map((feature, index) => (
-                   <li key={index} className="flex items-center justify-center"><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill> {feature}</li>
+                   <li key={index} className="flex items-center justify-center"><BsFillArrowRightCircleFill></BsFillArrowRightCircleFill> &nbsp; {feature}</li>
                 ))}
               </ul>
               <div className="modal-action">

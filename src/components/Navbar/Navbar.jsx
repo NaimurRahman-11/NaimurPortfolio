@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 
 
-const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, handleHomeClick, handleProjectsClick }) => {
+const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, handleHomeClick, handleProjectsClick, handleContactClick }) => {
 
 
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
@@ -42,7 +42,7 @@ const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, han
                             <li><a onClick={handleEducationClick}>Education</a></li>
                             <li><a onClick={handleSkillsClick}>Skills</a></li>
                             <li><a onClick={handleProjectsClick}>Projects</a></li>
-                            <li><a>Contact Me</a></li>
+                            <li><a onClick={handleContactClick}>Contact Me</a></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl">Naimur Rahman</a>
@@ -55,7 +55,7 @@ const Navbar = ({ handleAboutClick, handleEducationClick, handleSkillsClick, han
                         <li><a onClick={handleSkillsClick}>Skills</a></li>
                         <li><a onClick={handleProjectsClick}>Projects</a></li>
 
-                        <li><a>Contact Me</a></li>
+                        <li><a onClick={handleContactClick}>Contact Me</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

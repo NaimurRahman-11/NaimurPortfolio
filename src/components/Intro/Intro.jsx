@@ -26,7 +26,7 @@ const Intro = ({homeRef}) => {
       };
 
     return (
-        <div ref={homeRef} className="min-h-screen py-10 mt-5">
+        <div ref={homeRef} className="min-h-screen py-10 mt-5 pr-9">
             <div className="hero ">
                 <div className="hero-content flex-col lg:flex-row-reverse lg:items-start justify-center">
                     <img src={image} className="max-w-sm rounded-lg shadow-2xl mb-8 lg:mb-0 lg:mr-8 lg:mt-0 lg:ml-4" />
