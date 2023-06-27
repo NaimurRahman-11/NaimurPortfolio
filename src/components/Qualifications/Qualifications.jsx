@@ -1,3 +1,5 @@
+import { Bounce } from "react-awesome-reveal";
+
 const Qualifications = ({educationRef}) => {
 
 
@@ -5,7 +7,7 @@ const Qualifications = ({educationRef}) => {
     return (
 
         <div ref={educationRef} className="mt-10">
-            <div className="py-20">
+            <Bounce><div className="py-20">
             <h1 className="text-4xl font-bold text-center mb-5 mt-10 ">Educational Qualifications</h1> <br />
             <div className="flex justify-center p-4 ">
 
@@ -88,7 +90,7 @@ const Qualifications = ({educationRef}) => {
                     </li>
                 </ol>
             </div>
-            </div>
+            </div></Bounce>
         </div>
     );
 };

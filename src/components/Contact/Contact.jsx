@@ -1,9 +1,13 @@
+import { Zoom } from 'react-awesome-reveal';
 import { FaTwitter, FaLinkedin, FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Contact = ({contactRef}) => {
     return (
         <div ref={contactRef} className="container mx-auto px-4 min-h-screen py-20 mt-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+
+                <Zoom>
                 <div className="max-w-md mx-auto rounded-lg shadow-lg p-6">
                     <h2 className="text-2xl font-semibold mb-4">Contact Me</h2>
                     <form>
@@ -50,6 +54,10 @@ const Contact = ({contactRef}) => {
                         </div>
                     </form>
                 </div>
+                </Zoom>
+
+
+                <Zoom>
                 <div className="max-w-md mx-auto rounded-lg shadow-lg p-6">
                     <h2 className="text-2xl font-semibold mb-4">Additional Information</h2>
                     <p>Email: nirzon.naim@gmail.com</p>
@@ -75,6 +83,7 @@ const Contact = ({contactRef}) => {
                         </ul>
                     </div>
                 </div>
+                </Zoom>
             </div>
         </div>
     );
