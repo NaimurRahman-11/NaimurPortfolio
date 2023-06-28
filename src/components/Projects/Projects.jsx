@@ -4,7 +4,7 @@ import chefrecipe from "../../assets/chefrecipe.png";
 import learningschool from "../../assets/learningschool.png";
 import "./Projects.css";
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { Fade } from "react-awesome-reveal";
+
 
 const Projects = ({ projectsRef }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,42 +52,40 @@ const Projects = ({ projectsRef }) => {
 
     return (
         <div ref={projectsRef} className="min-h-screen py-20 mt-5 p-4">
-            <h1 className="text-4xl font-bold text-center mb-10 mt-10">Projects</h1>
+            <h1 className="text-3xl font-bold text-center mb-10 mt-10">Projects</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {projects.map((project, index) => (
-                    <Fade direction="up" duration={500} delay={index * 200} key={index}>
-                        <div className="max-w-sm mx-auto bg-base-100 shadow-xl rounded-xl overflow-hidden card transition-transform duration-300 ease-in-out transform hover:scale-110">
-                            <figure className="px-10 pt-10">
-                                <div className="image-container">
-                                    <img src={project.image} alt={project.title} className="rounded-xl w-full h-auto object-contain" />
-                                </div>
-                            </figure>
-                            <div className="px-6 h-[250px] py-4">
-                                <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-                                <p className="text-sm mb-4"><span className="font-bold">Technologies: </span>{project.technologies}</p>
-                                <p className="font-bold">
-                                    <a href={project.livesite} className="mr-2">
-                                        Live Site
-                                    </a>||&nbsp; 
-                                    <a href={project.clientside} className="mr-2">
-                                        Client Side
-                                    </a>||&nbsp;
-                                    <a href={project.serverside} className="mr-2">
-                                        Server Side
-                                    </a>
-                                </p>
-                                <div className="mt-4">
-                                    <button
-                                        className="btn btn-primary"
-                                        onClick={() => openModal(project)}
-                                    >
-                                        Read More
-                                    </button>
-                                </div>
-                            </div>
+                    <div key={index} className="max-w-sm mx-auto bg-base-100 shadow-xl rounded-xl overflow-hidden card transition-transform duration-300 ease-in-out transform hover:scale-110">
+                    <figure className="px-10 pt-10">
+                        <div className="image-container">
+                            <img src={project.image} alt={project.title} className="rounded-xl w-full h-auto object-contain" />
                         </div>
-                    </Fade>
+                    </figure>
+                    <div className="px-6 h-[250px] py-4">
+                        <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+                        <p className="text-sm mb-4"><span className="font-bold">Technologies: </span>{project.technologies}</p>
+                        <p className="font-bold">
+                            <a href={project.livesite} className="mr-2">
+                                Live Site
+                            </a>||&nbsp; 
+                            <a href={project.clientside} className="mr-2">
+                                Client Side
+                            </a>||&nbsp;
+                            <a href={project.serverside} className="mr-2">
+                                Server Side
+                            </a>
+                        </p>
+                        <div className="mt-4">
+                            <button
+                                className="btn btn-primary"
+                                onClick={() => openModal(project)}
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 ))}
             </div>
 
