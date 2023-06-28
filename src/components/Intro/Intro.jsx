@@ -7,7 +7,7 @@ import image from "../../assets/naimur.png";
 import TypewriterComponent from "typewriter-effect";
 import Count from "../Count/Count";
 import { motion } from "framer-motion";
-import { Bounce, Slide } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const Intro = ({ homeRef }) => {
   const [jobTitle, setJobTitle] = useState("MERN Stack Developer");
@@ -68,11 +68,9 @@ const Intro = ({ homeRef }) => {
         </div>
       </Slide>
 
-      <Bounce>
-        <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-4xl">
           <Count />
         </div>
-      </Bounce>
     </div>
   );
 };

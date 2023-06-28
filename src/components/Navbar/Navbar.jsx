@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./Navbar.css";
 
+
 const Navbar = ({
   handleAboutClick,
   handleEducationClick,
